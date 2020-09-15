@@ -1,9 +1,50 @@
+// variables
+%loc-temp{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 
+// styles
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(47,150,163),rgb(48,62,143));
+    color: #fff;
+    font-family: sans-serif;
+}
+.location{
+    @extend %loc-temp;
+
+}
+.temperature{
+    @extend %loc-temp;
+    flex-direction: column;
+
+    .degree-section{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        span{
+            margin: 10px;
+            font-size: 30px;
+        }
+        h2{
+            font-size: 40px;
+        }
+    }
 }
